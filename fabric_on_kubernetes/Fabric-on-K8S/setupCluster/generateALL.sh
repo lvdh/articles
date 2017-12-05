@@ -39,7 +39,7 @@ function generateChannelArtifacts() {
 }
 
 function generateK8sYaml (){
-	python3.5 transform/generate.py
+	python3.6 transform/generate.py
 }
 
 function clean () {
