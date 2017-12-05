@@ -5,7 +5,7 @@
 
 USER_ID=501
 LOCAL_SHARE=/opt/share
-NFS_EXPORTS_FILE=/etc/exports
+NFS_EXPORTS=/etc/exports
 
 echo " >>> Ensure nfsd is stopped ..."
 sudo nfsd stop
