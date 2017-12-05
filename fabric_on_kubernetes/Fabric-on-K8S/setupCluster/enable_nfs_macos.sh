@@ -12,7 +12,8 @@ sudo nfsd stop
 sleep 1
 
 echo " >>> Configure nfsd ..."
-echo "${LOCAL_SHARE} -mapall=${USER_ID} -alldirs" | sudo tee ${NFS_EXPORTS}
+sudo sed -i'.bak' "\:^${LOCAL_SHARE} :d" ${NFS_EXPORTS}
+echo "${LOCAL_SHARE} -mapall=${USER_ID} -alldirs" | sudo tee -a ${NFS_EXPORTS}
 
 echo " >>> (Re)start nfsd ..."
 sudo nfsd start
